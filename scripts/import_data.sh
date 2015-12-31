@@ -26,3 +26,21 @@ FROM STDIN DELIMITER ',' CSV HEADER" < ./data/user_info.csv
 
 psql -U postgres -h localhost -d bazaar_v8 -c "COPY bazaar.client(client_id,  name) 
 FROM STDIN DELIMITER ',' CSV HEADER" < ./data/client.csv
+
+psql -U postgres -h localhost -d bazaar_v8 -c "COPY bazaar.category(category_id,  name) 
+FROM STDIN DELIMITER ',' CSV HEADER" < ./data/category.csv
+
+psql -U postgres -h localhost -d bazaar_v8 -c "COPY payment.country(country_id,  name, code) 
+FROM STDIN DELIMITER ',' CSV HEADER" < ./data/country.csv
+
+psql -U postgres -h localhost -d bazaar_v8 -c "COPY bazaar.cart(cart_id,  name) 
+FROM STDIN DELIMITER ',' CSV HEADER" < ./data/cart.csv
+
+psql -U postgres -h localhost -d bazaar_v8 -c "COPY bazaar.cart_line(cart_id,  product_id, qty) 
+FROM STDIN DELIMITER ',' CSV HEADER" < ./data/cart_line.csv
+
+psql -U postgres -h localhost -d bazaar_v8 -c "COPY bazaar.orders(order_id,  cart_id, total_items) 
+FROM STDIN DELIMITER ',' CSV HEADER" < ./data/orders.csv
+
+psql -U postgres -h localhost -d bazaar_v8 -c "COPY bazaar.order_line(order_id,  product_id) 
+FROM STDIN DELIMITER ',' CSV HEADER" < ./data/order_line.csv

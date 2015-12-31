@@ -25,6 +25,8 @@ ALTER TABLE ONLY order_line
     ADD CONSTRAINT order_line_order_id_fkey FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE RESTRICT DEFERRABLE INITIALLY DEFERRED;
 
 
+ALTER TABLE ONLY order_line
+    ADD CONSTRAINT order_line_product_id_fkey FOREIGN KEY (product_id) REFERENCES product(product_id) ON UPDATE CASCADE ON DELETE RESTRICT DEFERRABLE INITIALLY DEFERRED;
 --
 -- Name: organization_parent_organization_id_fkey; Type: FK CONSTRAINT; Schema: bazaar;
 --
