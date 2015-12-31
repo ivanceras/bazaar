@@ -44,3 +44,6 @@ FROM STDIN DELIMITER ',' CSV HEADER" < ./data/orders.csv
 
 psql -U postgres -h localhost -d bazaar_v8 -c "COPY bazaar.order_line(order_id,  product_id) 
 FROM STDIN DELIMITER ',' CSV HEADER" < ./data/order_line.csv
+
+psql -U postgres -h localhost -d bazaar_v8 -c "COPY bazaar.review(review_id,  comment, rating, user_id) 
+FROM STDIN DELIMITER ',' CSV HEADER" < ./data/review.csv

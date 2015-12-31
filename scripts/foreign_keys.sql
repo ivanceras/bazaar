@@ -163,6 +163,9 @@ ALTER TABLE ONLY user_review
     ADD CONSTRAINT user_review_review_id_fkey FOREIGN KEY (review_id) REFERENCES review(review_id) ON UPDATE CASCADE ON DELETE RESTRICT DEFERRABLE INITIALLY DEFERRED;
 
 
+ALTER TABLE ONLY review
+    ADD CONSTRAINT review_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE RESTRICT DEFERRABLE INITIALLY DEFERRED;
+
 --
 -- Name: user_review_user_id_fkey; Type: FK CONSTRAINT; Schema: bazaar;
 --
