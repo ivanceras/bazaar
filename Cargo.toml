@@ -1,0 +1,37 @@
+[package]
+
+name = "bazaar"
+version = "0.0.1"
+authors = [ "Jovansonlee Cesar <ivanceras@gmail.com>" ]
+license = "MIT"
+description = "An online store written in rust"
+readme = "README.md"
+
+[lib]
+name = "bazaar"
+
+[[bin]]
+name = "bazaar_app"
+
+[dependencies.rustorm]
+version = "0.4.1"
+features = ["sqlite"]
+#path = "../rustorm"
+
+[dependencies.codegenta]
+version = "0.0.7"
+#path = "../codegenta"
+
+[dependencies]
+regex = "0.1.44"
+rustc-serialize = "0.3.16"
+iron = "0.2.6"
+router = "0.1.0"
+unicase = "1.1.0"
+hyper = "0.7.1"
+xml-rs = "0.2.2"
+rand = "0.3.12"
+uuid = "0.1.18"
+chrono = "0.2.17"
+hoedown = "3.0.3"
+persistent = "0.0.8"

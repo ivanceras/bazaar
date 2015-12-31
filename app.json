@@ -1,0 +1,11 @@
+{
+  "name": "Bazaar App",
+  "description": "bazaar plugin for curtain",
+  "repository": "https://github.com/ivanceras/bazaar",
+  "success_url": "/",
+  "keywords": ["curtain", "erp"],
+  "website": "",
+  "env": {
+    "BUILDPACK_URL": "https://github.com/mcasper/heroku-buildpack-rust.git"
+  }
+}
