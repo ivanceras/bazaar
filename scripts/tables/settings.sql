@@ -16,7 +16,7 @@ CREATE TABLE bazaar.settings
 -- Inherited from table system.record:  help text,
 -- Inherited from table system.record:  active boolean NOT NULL DEFAULT true,
   user_id uuid,
-  value json,
+  value text[],
   settings_id uuid NOT NULL DEFAULT uuid_generate_v4(),
   use_metric boolean DEFAULT true, -- Use metric system as unit, if false, use english system
   CONSTRAINT settings_pkey PRIMARY KEY (settings_id)--,

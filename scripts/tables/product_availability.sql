@@ -17,7 +17,7 @@ CREATE TABLE bazaar.product_availability
   stocks double precision DEFAULT 1,
   available_from timestamp with time zone,
   available_until timestamp with time zone,
-  available_day json, -- {"Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"}
+  available_day text[], -- {"Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"}
   open_time time with time zone,
   close_time time with time zone,
   CONSTRAINT product_availability_pkey PRIMARY KEY (product_id)--,

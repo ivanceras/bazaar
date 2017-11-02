@@ -21,8 +21,8 @@ CREATE TABLE bazaar.product
   price double precision,
   use_parent_price boolean DEFAULT false,
   unit character varying,
-  tags json,
-  info json, -- {color:"red",...
+  tags text[],
+  info text[], -- {color:"red",...
   seq_no integer, -- @Sequence can be used to do alternate ordering of the values, when alphetical or time can not be used
   upfront_fee double precision DEFAULT 0.00, -- Applicable to services, usually services has an upfront fee
   barcode character varying, -- barcode if scanning the product, conflict can happen, expect to return matching list of products using the barcode
