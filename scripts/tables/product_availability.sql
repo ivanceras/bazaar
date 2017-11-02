@@ -18,8 +18,8 @@ CREATE TABLE bazaar.product_availability
   available_from timestamp with time zone,
   available_until timestamp with time zone,
   available_day text[], -- {"Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"}
-  open_time time with time zone,
-  close_time time with time zone,
+  open_time time without time zone,
+  close_time time without time zone,
   CONSTRAINT product_availability_pkey PRIMARY KEY (product_id)--,
  -- CONSTRAINT product_availability_product_id_fkey FOREIGN KEY (product_id)
  --     REFERENCES bazaar.product (product_id) MATCH SIMPLE
